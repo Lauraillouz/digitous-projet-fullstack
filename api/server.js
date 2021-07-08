@@ -24,23 +24,67 @@ app.get("/:country", (req, res) => {
     let countryName = req.params.country;
     countryName = countryName.charAt(0).toUpperCase() + countryName.slice(1).toLowerCase();
 
-    let countriesInfo = countriesData.filter((country) => countryName === country.name)
+    let status = "";
+
+    let countryInfo = countriesData.filter((country) => countryName === country.name)
+
+    if (countryInfo.length === 0) {
+        status = "error";
+    } else {
+        status = "success";
+    }
+
     res.json({
-        status: "success",
-        data: countriesInfo
+        status: status,
+        data: countryInfo
     });
 });
 
 // Route capitale
-app.get("/:capital", (req, res) => {
+app.get("/country/:capital", (req, res) => {
     let capitalName = req.params.capital;
     capitalName = capitalName.charAt(0).toUpperCase() + capitalName.slice(1).toLowerCase();
 
-    capitalInfo = countriesData.filter(capital => capitalName === capital.name)
+    let status = "";
+
+    let capitalInfo = countriesData.filter((country) => capitalName === country.capital)
+    console.log(capitalInfo);
+
+    if (capitalInfo.length === 0) {
+        status = "error";
+    } else {
+        status = "success";
+    }
+
     res.json({
-        status: "success",
+        status: status,
         data: capitalInfo
     })
+
+})
+
+
+// Route region
+app.get("/region/:region", (req, res) => {
+    let regionName = req.params.region;
+    regionName = regionName.charAt(0).toUpperCase() + regionName.slice(1).toLowerCase();
+
+    let status = "";
+
+    let regionInfo = countriesData.filter((country) => regionName === country.region)
+    console.log(regionInfo);
+
+    if (regionInfo.length === 0) {
+        status = "error";
+    } else {
+        status = "success";
+    }
+
+    res.json({
+        status: status,
+        data: regionInfo
+    })
+
 })
 
 

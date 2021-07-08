@@ -36,46 +36,59 @@ html {
 /* Flex */
 .flex {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 /* Flex Row */
 .flex-row {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 /* Margins */
 .margin-top {
+    justify-content: center;;
     margin-top: 50px;
+    width: 80%;
 }
 .margin-right {
     margin: 0 5px 0 20px;
 }
 
 /* Bouton + Input setup */
-#text, #btnShowData {
+input, button {
     border: none;
     border-radius: 50px;
-    height: 3rem;
+    height: 2rem;
     text-align: center;
 }
-
-/* Bouton */
-#btnShowData {
-    margin: 50px;
+button {
     background-color: rgb(218, 245, 255);
     color: grey;
     font-family: Ubuntu bold;
+}
+#region {
+    margin-left: 10px;
+}
+
+/* Boutons */
+#btnShowData {
+    margin: 50px;
     width: 20%;
 }
-#btnShowData:hover {
+#browser {
+    width: 10%;
+    margin-left: 20px;
+}
+
+button:hover {
     background-color: lavender;
     color: lightsteelblue;
 }
 
 /* Input */
 #text {
-    width: 80%;
+    width: 20%;
 }
 
 /* liste de pays par défaut */
@@ -95,7 +108,7 @@ li {
 /* Cartes pays */
 .countryInfo {
     background-image: linear-gradient(to right, rgba(255,0,0,0), white);
-    width: 80%;
+    width: 50%;
     border-radius: 50px;
     padding-top: 50px;
     margin-bottom: 50px;
@@ -103,5 +116,6 @@ li {
 
 /* Radio */
 .radio {
-    margin-top: 20px;
+    height: 1rem;
+    margin-right: 10px;
 }

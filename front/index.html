@@ -13,21 +13,35 @@
 
         <h1 id="site-title">Countries API</h1>
 
-        <form class="flex">
-            <input id="text" type="text" placeholder="">
+        <form class="flex column">
+            <input id="text" type="text" placeholder="Enter a country">
 
-            <div class="margin-top">
-            <span class="margin-right">Choose by:</span>
-            <input name="radio" id="country" class="margin-right radio" type="radio" value="country" data-hint="Enter a country">
+            <div class="margin-top flex-row">
+                <label class="margin-right">Choose by:</label>
+                <input name="radio" id="country" class="margin-right radio" type="radio" value="country" data-hint="Enter a country" checked>
                 <label for="country">Country</label>
-            <input name ="radio" id="capital" class="margin-right radio" type="radio" value="capital" data-hint="Enter a capital">
+                <input name="radio" id="capital" class="margin-right radio" type="radio" value="capital" data-hint="Enter a capital">
                 <label for="capital">Capital</label>
             </div>
+
+            <div class="margin-top flex-row">
+                <label class="margin-right" for="region">See countries by region:</label>
+                <input list="regions" name="region" id="region">
+                <datalist id="regions">
+                    <option value="Africa"></option>
+                    <option value="Americas"></option>
+                    <option value="Asia"></option>
+                    <option value="Europe"></option>
+                    <option value="Oceania"></option>
+                </datalist>
+                <button id="browser" type="button">Browse</button>
+
+            </div>
             
-            <button id="btnShowData" type="button">Show Data</button>
+            <button id="btnShowData" type="button">SHOW DATA</button>
         </form>
     
-        <div class="flex">
+        <div class="column flex">
             <ul class="data countryInfo flex">
 
             </ul>
