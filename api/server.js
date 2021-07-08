@@ -48,7 +48,6 @@ app.get("/country/:capital", (req, res) => {
     let status = "";
 
     let capitalInfo = countriesData.filter((country) => capitalName === country.capital)
-    console.log(capitalInfo);
 
     if (capitalInfo.length === 0) {
         status = "error";
@@ -72,7 +71,6 @@ app.get("/region/:region", (req, res) => {
     let status = "";
 
     let regionInfo = countriesData.filter((country) => regionName === country.region)
-    console.log(regionInfo);
 
     if (regionInfo.length === 0) {
         status = "error";

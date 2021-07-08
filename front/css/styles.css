@@ -47,7 +47,7 @@ html {
 }
 /* Margins */
 .margin-top {
-    justify-content: center;;
+    justify-content: center;
     margin-top: 50px;
     width: 80%;
 }
@@ -128,4 +128,25 @@ li {
 .radio {
     height: 1rem;
     margin-right: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 425px) {
+    #btnShowData, #text {
+        min-width: 200px;
+    }
+    .flex-row {
+        flex-direction: column;
+        align-items:center;
+    }
+    .radio {
+        margin-top: 20px;
+    }
+    #region {
+        margin: 20px 0 20px 0;
+    }
+    #browser {
+        margin-left: 0;
+    }
+    
 }

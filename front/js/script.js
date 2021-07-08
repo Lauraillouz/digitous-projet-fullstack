@@ -108,7 +108,6 @@ function getCapitalInfo () {
 // Récupérer les continents
 function getRegionInfo () {
     let regionInput = $("#region").val();
-    console.log(regionInput);
 
     $.ajax({
         url: `http://localhost:8000/region/${regionInput}`,
