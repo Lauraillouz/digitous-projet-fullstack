@@ -14,23 +14,39 @@ app.get("/all", (req, res) => {
         return country.name;
     });
     res.json({
+        status: "success",
         data: countriesNames
     });
 });
 
-//Route pays
+// Route pays
 app.get("/:country", (req, res) => {
     let countryName = req.params.country;
     countryName = countryName.charAt(0).toUpperCase() + countryName.slice(1).toLowerCase();
 
-    countriesInfo = countriesData.filter(country => countryName === country.name)
-    console.log(countriesInfo)
+    let countriesInfo = countriesData.filter((country) => countryName === country.name)
     res.json({
+        status: "success",
         data: countriesInfo
     });
 });
 
+// Route capitale
+app.get("/:capital", (req, res) => {
+    let capitalName = req.params.capital;
+    capitalName = capitalName.charAt(0).toUpperCase() + capitalName.slice(1).toLowerCase();
 
+    capitalInfo = countriesData.filter(capital => capitalName === capital.name)
+    res.json({
+        status: "success",
+        data: capitalInfo
+    })
+})
+
+
+
+
+// Démarrage serveur
 app.listen(PORT, () => {
     console.log(`Listening to PORT ${PORT}`);
 });

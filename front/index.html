@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countries API</title>
-    <link href="styles.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
 </head>
 
 
@@ -14,7 +14,16 @@
         <h1 id="site-title">Countries API</h1>
 
         <form class="flex">
-            <input id="text" placeholder="Enter a country">
+            <input id="text" type="text" placeholder="">
+
+            <div class="margin-top">
+            <span class="margin-right">Choose by:</span>
+            <input name="radio" id="country" class="margin-right radio" type="radio" value="country" data-hint="Enter a country">
+                <label for="country">Country</label>
+            <input name ="radio" id="capital" class="margin-right radio" type="radio" value="capital" data-hint="Enter a capital">
+                <label for="capital">Capital</label>
+            </div>
+            
             <button id="btnShowData" type="button">Show Data</button>
         </form>
     
@@ -28,7 +37,7 @@
 
 
 
-
+    <!--JS FILES-->
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
