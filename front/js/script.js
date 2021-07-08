@@ -4,6 +4,7 @@ $(() => {
     $("#btnShowData").click(handleClick);
     $("#browser").click(getRegionInfo);
     radioButton();
+    reset();
 })
 
 
@@ -27,7 +28,11 @@ function radioButton() {
     })
 }
 
-
+function reset() {
+    $("#btnReset").click(() => {
+        document.location.reload();
+    })
+}
 
 // Récupérer tous les noms de pays
 let countriesNames = [];

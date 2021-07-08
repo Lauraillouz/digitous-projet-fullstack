@@ -75,15 +75,25 @@ button {
 #btnShowData {
     margin: 50px;
     width: 20%;
-}
-#browser {
-    width: 10%;
-    margin-left: 20px;
-}
 
-button:hover {
+}
+#btnReset {
+    margin-bottom: 20px;
     background-color: lavender;
     color: lightsteelblue;
+    width: 100px;
+}
+#browser {
+    width: 100px;
+    margin-left: 20px;
+}
+#btnReset:hover {
+    background-color: violet;
+    color: white;
+}
+.btn:hover {
+    background-color: lavender;
+    color: violet;
 }
 
 /* Input */
