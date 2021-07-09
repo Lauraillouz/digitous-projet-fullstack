@@ -67,18 +67,24 @@ button {
     color: grey;
     font-family: Ubuntu bold;
 }
+button:hover {
+    animation: scaleUp 1.5s;
+}
+input:focus {
+    background-color: lavenderblush;
+}
 #region {
     margin-left: 10px;
 }
 
 /* Boutons */
 #btnShowData {
-    margin: 50px;
+    margin-top: 50px;
     width: 20%;
 
 }
 #btnReset {
-    margin-bottom: 20px;
+    margin: 50px 0 20px 0;
     background-color: lavender;
     color: lightsteelblue;
     width: 100px;
@@ -131,7 +137,7 @@ li {
 }
 
 /* Media Queries */
-@media (max-width: 425px) {
+@media (max-width: 500px) {
     #btnShowData, #text {
         min-width: 200px;
     }
@@ -149,4 +155,14 @@ li {
         margin-left: 0;
     }
     
+}
+
+/* Keyframes  */
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
 }

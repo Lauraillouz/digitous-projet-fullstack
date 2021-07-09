@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 app.use(cors());
-
+const fs = require("fs");
 const PORT = 8000;
 
 const countriesData = require("./countriesData.json");
@@ -84,6 +84,9 @@ app.get("/region/:region", (req, res) => {
     })
 
 })
+
+
+// Requêtes reçues sauvegardées
 
 
 
