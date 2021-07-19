@@ -128,3 +128,10 @@ function getRegionInfo () {
         }
     })
 }
+
+// Prevent Default
+/*
+const showData = document.querySelector("#btnShowData");
+showData.addEventListener("click", function (thankyoukevin) {
+    thankyoukevin.preventDefault();
+}) */

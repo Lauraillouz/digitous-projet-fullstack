@@ -6,6 +6,7 @@ const fs = require("fs");
 const PORT = 8000;
 
 const countriesData = require("./countriesData.json");
+const { request } = require("http");
 
 
 // Route initiale
@@ -34,6 +35,11 @@ app.get("/:country", (req, res) => {
         status = "success";
     }
 
+    fs.appendFile("logs.txt", countryName, (err) => {
+        if (err) throw err;
+        console.log("File successfully updated!");
+    })
+
     res.json({
         status: status,
         data: countryInfo
@@ -54,6 +60,11 @@ app.get("/country/:capital", (req, res) => {
     } else {
         status = "success";
     }
+
+    fs.appendFile("logs.txt", countryName, (err) => {
+        if (err) throw err;
+        console.log("File successfully updated!");
+    })
 
     res.json({
         status: status,
@@ -87,7 +98,6 @@ app.get("/region/:region", (req, res) => {
 
 
 // Requêtes reçues sauvegardées
-
 
 
 
